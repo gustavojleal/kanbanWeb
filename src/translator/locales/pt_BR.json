@@ -1,0 +1,25 @@
+{
+  "Enter a valid e-mail": "Entre um e-mail valido",
+  "Mandatory name": "Nome obrigatório",
+  "Mandatory e-mail": "E-mail obrigatório",
+  "Mandatory password": "Senha obrigatória",
+  "At least 6 digits": "No mínimo 6 dígitos",
+  "Registration completed": "Cadastro realizado!",
+  "Make your registration": "Faça seu cadastro",
+
+  "Registration error": "Erro no cadastro",
+  "An error occurred while registering, please try again.": "Ocorreu um erro ao fazer cadastro, tente novamente.",  
+
+
+  "You can now login to Easy Kanban!": "Você já pode fazer seu logon no Easy Kanban!",
+  "Authentication error": "Erro na autenticação",
+  "There was an error signing in, check credentials": "Ocorreu um erro ao fazer login, cheque as credenciais",
+  "Log in": "Faça seu logon",
+  "Name": "Nome",
+  "Password": "Senha",
+  "Enter": "Entrar",
+  "Password Forgot": "Esqueci minha senha",
+  "Create account": "Criar conta",
+  "Register": "Cadastrar",
+  "Back to login": "Voltar para logon"
+}

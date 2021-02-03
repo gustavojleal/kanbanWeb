@@ -1,0 +1,25 @@
+{
+    "Enter a valid e-mail": "Enter a valid e-mail",
+    "Mandatory name": "Mandatory name",
+    "Mandatory e-mail": "Mandatory e-mail",
+    "Mandatory password": "Mandatory password",
+    "At least 6 digits": "At least 6 digits",
+    "Registration completed": "Registration completed",
+    "Make your registration": "Make your registration",
+
+    "Registration error": "Registration error",
+    "An error occurred while registering, please try again.": "An error occurred while registering, please try again.",
+
+
+    "You can now login to Easy Kanban!": "You can now login to Easy Kanban!",
+    "Authentication error": "Authentication error",
+    "There was an error signing in, check credentials": "There was an error signing in, check credentials",
+    "Log in": "Log in",
+    "Name": "Name",
+    "Password": "Password",
+    "Enter": "Enter",
+    "Password Forgot": "Password Forgot",
+    "Create account": "Create account",
+    "Register": "Register",
+    "Back to login": "Back to login"
+}
