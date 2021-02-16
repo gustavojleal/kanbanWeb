@@ -41,6 +41,7 @@ interface ICard {
   removable: boolean;
 }
 
+
 interface IProjectFormData {
   name: string;
   newNumberOfColumns: number;
@@ -52,6 +53,7 @@ interface IEditName {
   colNumber: number;
   
 }
+
 
 const NewProject: React.FC = () => {
   const [typing, setTyping] = useState(false)
@@ -93,7 +95,7 @@ const NewProject: React.FC = () => {
   const editName = async () => {
     try {
       projects.columns = []
-      projects.tasks = []
+      // projects.tasks = []
       newNames.map((column) => {
         const nameFound = boardColumns.findIndex(names => names.name === column.name)
         if (nameFound > -1) {
@@ -106,11 +108,20 @@ const NewProject: React.FC = () => {
 
       const name = projectName
 
-      projects.columns = boardColumns
+      const cards = 
+       [ { 
+          column: 1,
+          taskName: "to Do",
+          description: "Enter the description of the task here",
+          blocked: false,
+          whyBlocked: ''
+        } ]
 
-      const structure = JSON.stringify(projects)
+      const structure = JSON.stringify(boardColumns)
+      const tasks = JSON.stringify(cards)
 
-      const data = {name, structure}
+      const data = {name, structure, tasks}
+      console.log(data)
      
       await api.post('/projects', data)
 
@@ -242,7 +253,7 @@ const NewProject: React.FC = () => {
                             }
                           }}
                         
-                          placeholder={card.taskName}></input>
+                          placeholder={card.taskName}/>
                        
                       </Card>
                     ))}
@@ -269,4 +280,6 @@ const NewProject: React.FC = () => {
 
 
 export default NewProject;
+
+
 

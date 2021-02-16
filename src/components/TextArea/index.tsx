@@ -1,5 +1,5 @@
 import React, {
-  InputHTMLAttributes,
+  TextareaHTMLAttributes,
   useEffect,
   useRef,
   useState,
@@ -11,34 +11,34 @@ import { useField } from '@unform/core';
 
 import { Container, Error } from './styles';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement>
+{
   name: string;
   containerStyle?: object;
-  
   icon?: React.ComponentType<IconBaseProps>;
 }
 
-const Input: React.FC<InputProps> = ({ name, containerStyle, icon: Icon, ...rest }) => {
-  const inputRef = useRef<HTMLInputElement>(null);
+const Input: React.FC<TextAreaProps> = ({ name, containerStyle, icon: Icon, ...rest }) => {
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
 
   const { fieldName, defaultValue, error, registerField } = useField(name);
 
-  const handleInputFocus = useCallback(() => {
+  const handleTextAreaFocus = useCallback(() => {
     setIsFocused(true);
   }, []);
 
-  const handleInputBlur = useCallback(() => {
+  const handleTextAreaBlur = useCallback(() => {
     setIsFocused(false);
 
-    setIsFilled(!!inputRef.current?.value);
+    setIsFilled(!!textAreaRef.current?.value);
   }, []);
 
   useEffect(() => {
     registerField({
       name: fieldName,
-      ref: inputRef.current,
+      ref: textAreaRef.current,
       path: 'value',
     });
   }, [fieldName, registerField]);
@@ -47,13 +47,10 @@ const Input: React.FC<InputProps> = ({ name, containerStyle, icon: Icon, ...rest
     <Container style={ containerStyle } isErrored={!!error} isFocused={isFocused} isFilled={isFilled}>
       {Icon && <Icon size={20} />}
 
-      <input
-        onFocus={handleInputFocus}
-        onBlur={handleInputBlur}
+      <textarea
         defaultValue={defaultValue}
-        ref={inputRef}
+        ref={textAreaRef}
         {...rest}
-        // type="text"
         
       />
       {error && (

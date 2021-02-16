@@ -8,7 +8,7 @@ interface ModalProps {
   toggle: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ isShowing, toggle, children }) => { 
+const ModalCard: React.FC<ModalProps> = ({ isShowing, toggle, children }) => { 
     useEffect(() => {
         const listner = function (e: KeyboardEvent ) {
             if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
@@ -76,4 +76,4 @@ export const useModal = () => {
     }
 }
 
-export default Modal;
+export default ModalCard;

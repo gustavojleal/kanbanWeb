@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div``;
 
@@ -10,8 +11,7 @@ export const Header = styled.header`
 export const HeaderContent = styled.div`
   max-width: 1120px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
+  display: flex;import { shade } from 'polished';
 
   > img {
     height: 80px;
@@ -28,6 +28,7 @@ export const HeaderContent = styled.div`
       height: 20px;
     }
   }
+import { shade } from 'polished';
 `;
 
 export const Profile = styled.div`
@@ -44,6 +45,7 @@ export const Profile = styled.div`
   div {
     display: flex;
     flex-direction: column;
+import { shade } from 'polished';
     margin-left: 16px;
     line-height: 24px;
 
@@ -71,7 +73,24 @@ export const Menu = styled.div`
   text-decoration: none;
   color: #ff9000;
   font-size: 20px;
+`;
 
+export const ConfirmButtons = styled.main`
+  
+  background: #ff9000;
+  height: 46px;
+  /* border-radius: 10px; */
+  border: 0;
+  padding: 0 16px;
+  color: #312e38;
+  width: 100%;
+  font-weight: 500;
+  margin-top: 16px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background: ${shade(0.2, '#ff9000')};
+  }
 `;
 
 export const Content = styled.main`
@@ -156,11 +175,5 @@ export const Card = styled.div`
 `
 
 
-export const ModalCard = styled.div` 
-  position: fixed;
-  top: 50;
-  left: 50;
-  border-radius: 1px;
-  background-color: #fff
-`;
+
 
